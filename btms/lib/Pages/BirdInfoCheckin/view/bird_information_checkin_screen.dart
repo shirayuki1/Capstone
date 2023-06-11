@@ -47,6 +47,13 @@ class BirdInformationCheckinScreen
           },
           child: ListView(
             children: [
+              Container(
+                  height: 300,
+                  width: 300,
+                  alignment: Alignment.center,
+                  child: Image.network(
+                      "https://vinacheck.vn/media/2019/05/ma-qr-code_vinacheck.vm_001.jpg")),
+
               // Center(
               //   child: Stack(
               //     children: [
@@ -301,58 +308,6 @@ class BirdInformationCheckinScreen
 
               SizedBox(
                 height: 35,
-              ),
-              Row(
-                children: [
-                  Container(
-                    width: 170,
-                    height: 50,
-                    alignment: Alignment.center,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.toNamed(Routes.listBird);
-                      },
-                      child: Text(
-                        "Xóa hồ sơ",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                        color: Color(0xffFF0000),
-                        borderRadius: BorderRadius.circular(4)),
-                  ),
-                  SizedBox(
-                    width: 38,
-                  ),
-                  Container(
-                    width: 170,
-                    height: 50,
-                    alignment: Alignment.center,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.toNamed(Routes.updateBird);
-                      },
-                      child: Text(
-                        "Chỉnh sửa",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                        color: Color(0xffFFBF00),
-                        borderRadius: BorderRadius.circular(4)),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
               ),
             ],
           ),

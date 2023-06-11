@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class Constants {
   /// Base url for calling api
-  //static final String baseUrl = "https://ipsb.azurewebsites.net/";
+  static final String baseUrl = "https://ipsb.azurewebsites.net/";
 
   /// Timeout when calling API
   static final Duration timeout = Duration(seconds: 20);

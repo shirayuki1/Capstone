@@ -25,7 +25,8 @@ class ComingTournamentDetailScreen
             color: Colors.black,
           ),
           onPressed: () {
-            Get.back(closeOverlays: true);
+            // Get.back(closeOverlays: true);
+            Get.toNamed(Routes.homeScreen);
           },
         ),
         elevation: 1,
@@ -76,6 +77,9 @@ class ComingTournamentDetailScreen
         panel: Container(
           child: Column(
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 "Đăng kí",
                 textAlign: TextAlign.center,
@@ -89,7 +93,9 @@ class ComingTournamentDetailScreen
               Column(
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.checkinBird);
+                    },
                     child: Container(
                       width: screenSize.width * 0.85,
                       height: screenSize.height * 0.08,
@@ -123,10 +129,12 @@ class ComingTournamentDetailScreen
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.checkinBird);
+                    },
                     child: Container(
                       width: screenSize.width * 0.85,
                       height: screenSize.height * 0.08,
@@ -165,7 +173,7 @@ class ComingTournamentDetailScreen
                 height: 20,
               ),
               Container(
-                width: screenSize.width * 0.85,
+                width: screenSize.width * 0.55,
                 height: screenSize.height * 0.05,
                 alignment: Alignment.center,
                 child: GestureDetector(

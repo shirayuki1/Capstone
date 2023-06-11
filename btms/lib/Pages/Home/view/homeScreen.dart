@@ -23,44 +23,12 @@ class HomeScreen extends GetView<HomeController> {
         child: DefaultTabController(
           length: 2,
           child: Scaffold(
-            // appBar: AppBar(
-            //   // backgroundColor: Color(0xFF0C9869).withOpacity(0.5),
-            //   // foregroundColor: Color(0xFF0C9869).withOpacity(0.05),
-            //   backgroundColor: Color(0xFFffffff),
-            //   foregroundColor: Color(0xFFffffff),
-            //   toolbarHeight: 100,
-            //   centerTitle: true,
-            //   title: Text(
-            //     'Tournament',
-            //     textAlign: TextAlign.center,
-            //     style: TextStyle(
-            //         color: Color(0xff000000),
-            //         fontSize: 40,
-            //         fontWeight: FontWeight.bold),
-            //   ),
-            //   // bottom: PreferredSize(
-            //   //   child: HomeSearchBar(),
-            //   //   preferredSize: Size.fromHeight(5),
-            //   // ),
-            // ),
-            // body: Container(
-            //   child: Column(
-            //     children: [Container(child: Text(
-            //           "Giải đấu chào mào",
-            //           textAlign: TextAlign.center,
-            //           style: TextStyle(
-            //             fontSize: 40,
-            //             fontWeight: FontWeight.bold,
-            //           ),
-            //         ),)],
-            //   ),
-            // ),
             body: Container(
               child: Stack(
                 fit: StackFit.loose,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 40),
+                    margin: EdgeInsets.only(top: 50),
                     width: 450,
                     child: Text(
                       "Giải đấu chào mào",
@@ -72,11 +40,11 @@ class HomeScreen extends GetView<HomeController> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 120),
+                    margin: EdgeInsets.only(top: 130),
                     child: HomeSearchBar(),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 30),
+                    margin: EdgeInsets.only(top: 20),
                     child: HomeTabView(),
                   ),
                 ],

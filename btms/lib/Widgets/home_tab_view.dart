@@ -48,6 +48,9 @@ class HomeTabView extends GetView<HomeController> {
             tabs: [
               Container(
                 width: 120,
+                margin: EdgeInsets.only(
+                  bottom: 20,
+                ),
                 child: Tab(
                   // text: "Đang diễn ra",
                   child: Text(
@@ -64,6 +67,9 @@ class HomeTabView extends GetView<HomeController> {
               ),
               Container(
                 width: 120,
+                margin: EdgeInsets.only(
+                  bottom: 20,
+                ),
                 child: Tab(
                   // text: "Đang diễn ra",
                   child: Text(
@@ -141,12 +147,12 @@ class HomeTabView extends GetView<HomeController> {
                         width: 10,
                       ),
                       Container(
-                        height: 130,
-                        width: 90,
+                        // height: 100,
+                        // width: 100,
                         child: Image.network(
-                          "https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/348478978_226090880123741_4190462779249897218_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=QtDhJGWuZ2gAX-l_ccQ&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfA3_dgn6LMJmchRsbkDgEzUmz_nyj93wJTAWvLQ557xVw&oe=647E0303",
-                          width: 90,
-                          height: 130,
+                          "https://cdn.wikifarm.vn/2023/03/chim-chao-mao-7.jpg",
+                          width: 100,
+                          height: 100,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -280,7 +286,7 @@ class HomeTabView extends GetView<HomeController> {
                         height: 130,
                         width: 90,
                         child: Image.network(
-                          "https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/348478978_226090880123741_4190462779249897218_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=QtDhJGWuZ2gAX-l_ccQ&_nc_ht=scontent.fsgn2-7.fna&oh=00_AfA3_dgn6LMJmchRsbkDgEzUmz_nyj93wJTAWvLQ557xVw&oe=647E0303",
+                          "https://cdn.wikifarm.vn/2023/03/chim-chao-mao-7.jpg",
                           width: 90,
                           height: 130,
                         ),

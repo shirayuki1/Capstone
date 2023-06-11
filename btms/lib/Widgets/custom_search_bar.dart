@@ -15,12 +15,15 @@ class HomeSearchBar extends GetView<HomeController> {
     // final screen = MediaQuery.of(context).size;
     return FloatingSearchBar(
       hint: 'Tìm kiếm..',
-      scrollPadding: const EdgeInsets.only(top: 10, bottom: 56),
-      transitionDuration: const Duration(milliseconds: 800),
+      hintStyle: TextStyle(
+        fontSize: 15,
+      ),
+      scrollPadding: const EdgeInsets.only(top: 10, bottom: 60),
+      transitionDuration: const Duration(milliseconds: 500),
       transitionCurve: Curves.easeInOut,
       physics: const BouncingScrollPhysics(),
       openAxisAlignment: 0.0,
-      width: 390,
+      width: 360,
       debounceDelay: const Duration(milliseconds: 500),
       // onQueryChanged: (query) => controller.searchCoupons(query),
       transition: CircularFloatingSearchBarTransition(),
@@ -34,7 +37,7 @@ class HomeSearchBar extends GetView<HomeController> {
             child: Row(
               children: [
                 Container(
-                  height: 34,
+                  height: 35,
                   width: 1.3,
                   color: Colors.grey.shade300,
                 ),

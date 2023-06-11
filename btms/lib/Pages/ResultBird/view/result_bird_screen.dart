@@ -25,7 +25,7 @@ class ResultBirdScreen extends GetView<ResultBirdController> {
           children: [
             Text(
               'Danh sách chim',
-              style: TextStyle(color: Colors.black, fontSize: 40),
+              style: TextStyle(color: Colors.black, fontSize: 30),
             ),
           ],
         ),
@@ -38,7 +38,7 @@ class ResultBirdScreen extends GetView<ResultBirdController> {
           children: [
             GestureDetector(
               onTap: () {
-                Get.toNamed(Routes.birdInfo);
+                Get.toNamed(Routes.resultInfoBird);
               },
               child: Container(
                 width: screenSize.width * 0.85,
@@ -77,7 +77,7 @@ class ResultBirdScreen extends GetView<ResultBirdController> {
             ),
             GestureDetector(
               onTap: () {
-                Get.toNamed(Routes.birdInfo);
+                Get.toNamed(Routes.resultInfoBird);
               },
               child: Container(
                 width: screenSize.width * 0.85,

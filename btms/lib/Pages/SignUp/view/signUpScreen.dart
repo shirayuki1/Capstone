@@ -34,23 +34,11 @@ class SignUpScreen extends GetView<SignUpController> {
             end: Alignment.bottomRight,
             stops: const [0.1, 0.4, 0.7, 0.9],
             colors: [
-              // HexColor("#4b4293").withOpacity(0.8),
-              // HexColor("#4b4293"),
-              // HexColor("#08418e"),
-              // HexColor("#08418e")
-              HexColor("#ffffff").withOpacity(0.8),
-              HexColor("#ffffff"),
-              HexColor("#ffffff"),
-              HexColor("#ffffff")
+              HexColor("#BBFFFF"),
+              HexColor("#96CDCD"),
+              HexColor("#AEEEEE"),
+              HexColor("#668B8B").withOpacity(0.99),
             ],
-          ),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(
-                HexColor("#ffffff").withOpacity(0.2), BlendMode.dstATop),
-            image: const NetworkImage(
-              '',
-            ),
           ),
         ),
         child: Center(
@@ -58,6 +46,33 @@ class SignUpScreen extends GetView<SignUpController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                FadeAnimation(
+                  delay: 0.1,
+                  child: Image.network(
+                    "https://chimchaomao.vn/upload/baiviet/logomobile-4993.png",
+                    width: 100,
+                    height: 100,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                FadeAnimation(
+                  delay: 1,
+                  child: Container(
+                    child: Text(
+                      "Hãy đăng ký tài khoản mới nào!",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black.withOpacity(0.9),
+                        // letterSpacing: 0.5,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
                 Card(
                   elevation: 5,
                   color:
@@ -68,40 +83,26 @@ class SignUpScreen extends GetView<SignUpController> {
                     padding: const EdgeInsets.all(40.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        stops: const [0.1, 0.4, 0.7, 0.9],
+                        colors: [
+                          HexColor("#668B8B").withOpacity(0.99),
+                          HexColor("#96CDCD"),
+                          HexColor("#AEEEEE"),
+                          HexColor("#BBFFFF"),
+                        ],
+                      ),
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         FadeAnimation(
-                          delay: 0.8,
-                          child: Image.network(
-                            "https://chimchaomao.vn/upload/baiviet/logomobile-4993.png",
-                            width: 100,
-                            height: 100,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        FadeAnimation(
-                          delay: 1,
-                          child: Container(
-                            child: Text(
-                              "Tạo tài khoản",
-                              style: TextStyle(
-                                  color: Colors.black.withOpacity(0.9),
-                                  letterSpacing: 0.5),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        FadeAnimation(
                           delay: 1,
                           child: Container(
                             width: 300,
-                            height: 40,
+                            height: 50,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
                               color: selected == FormData.Email
@@ -124,14 +125,14 @@ class SignUpScreen extends GetView<SignUpController> {
                                   color: selected == FormData.Name
                                       ? enabledtxt
                                       : deaible,
-                                  size: 20,
+                                  size: 25,
                                 ),
                                 hintText: 'Họ và Tên',
                                 hintStyle: TextStyle(
                                     color: selected == FormData.Name
                                         ? enabledtxt
                                         : deaible,
-                                    fontSize: 12),
+                                    fontSize: 15),
                               ),
                               textAlignVertical: TextAlignVertical.center,
                               style: TextStyle(
@@ -139,7 +140,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       ? enabledtxt
                                       : deaible,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontSize: 15),
                             ),
                           ),
                         ),
@@ -150,7 +151,7 @@ class SignUpScreen extends GetView<SignUpController> {
                           delay: 1,
                           child: Container(
                             width: 300,
-                            height: 40,
+                            height: 50,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
                               color: selected == FormData.Phone
@@ -173,14 +174,14 @@ class SignUpScreen extends GetView<SignUpController> {
                                   color: selected == FormData.Phone
                                       ? enabledtxt
                                       : deaible,
-                                  size: 20,
+                                  size: 25,
                                 ),
                                 hintText: 'Số điện thoại',
                                 hintStyle: TextStyle(
                                     color: selected == FormData.Phone
                                         ? enabledtxt
                                         : deaible,
-                                    fontSize: 12),
+                                    fontSize: 15),
                               ),
                               textAlignVertical: TextAlignVertical.center,
                               style: TextStyle(
@@ -188,7 +189,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       ? enabledtxt
                                       : deaible,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontSize: 15),
                             ),
                           ),
                         ),
@@ -199,7 +200,7 @@ class SignUpScreen extends GetView<SignUpController> {
                           delay: 1,
                           child: Container(
                             width: 300,
-                            height: 40,
+                            height: 50,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.0),
                               color: selected == FormData.Email
@@ -222,14 +223,14 @@ class SignUpScreen extends GetView<SignUpController> {
                                   color: selected == FormData.Email
                                       ? enabledtxt
                                       : deaible,
-                                  size: 20,
+                                  size: 25,
                                 ),
                                 hintText: 'Email',
                                 hintStyle: TextStyle(
                                     color: selected == FormData.Email
                                         ? enabledtxt
                                         : deaible,
-                                    fontSize: 12),
+                                    fontSize: 15),
                               ),
                               textAlignVertical: TextAlignVertical.center,
                               style: TextStyle(
@@ -237,7 +238,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       ? enabledtxt
                                       : deaible,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontSize: 15),
                             ),
                           ),
                         ),
@@ -248,7 +249,7 @@ class SignUpScreen extends GetView<SignUpController> {
                           delay: 1,
                           child: Container(
                             width: 300,
-                            height: 40,
+                            height: 50,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12.0),
                                 color: selected == FormData.password
@@ -270,7 +271,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                     color: selected == FormData.password
                                         ? enabledtxt
                                         : deaible,
-                                    size: 20,
+                                    size: 25,
                                   ),
                                   suffixIcon: IconButton(
                                       icon: ispasswordev
@@ -280,7 +281,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                                   selected == FormData.password
                                                       ? enabledtxt
                                                       : deaible,
-                                              size: 20,
+                                              size: 25,
                                             )
                                           : Icon(
                                               Icons.visibility,
@@ -288,7 +289,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                                   selected == FormData.password
                                                       ? enabledtxt
                                                       : deaible,
-                                              size: 20,
+                                              size: 25,
                                             ),
                                       onPressed: () {}
                                       // setState(
@@ -299,7 +300,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       color: selected == FormData.password
                                           ? enabledtxt
                                           : deaible,
-                                      fontSize: 12)),
+                                      fontSize: 15)),
                               obscureText: ispasswordev,
                               textAlignVertical: TextAlignVertical.center,
                               style: TextStyle(
@@ -307,7 +308,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       ? enabledtxt
                                       : deaible,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontSize: 15),
                             ),
                           ),
                         ),
@@ -318,7 +319,7 @@ class SignUpScreen extends GetView<SignUpController> {
                           delay: 1,
                           child: Container(
                             width: 300,
-                            height: 40,
+                            height: 50,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12.0),
                                 color: selected == FormData.ConfirmPassword
@@ -340,7 +341,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                     color: selected == FormData.ConfirmPassword
                                         ? enabledtxt
                                         : deaible,
-                                    size: 20,
+                                    size: 25,
                                   ),
                                   suffixIcon: IconButton(
                                       icon: ispasswordev
@@ -350,7 +351,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                                       FormData.ConfirmPassword
                                                   ? enabledtxt
                                                   : deaible,
-                                              size: 20,
+                                              size: 25,
                                             )
                                           : Icon(
                                               Icons.visibility,
@@ -358,7 +359,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                                       FormData.ConfirmPassword
                                                   ? enabledtxt
                                                   : deaible,
-                                              size: 20,
+                                              size: 25,
                                             ),
                                       onPressed: () {}
                                       // setState(
@@ -370,7 +371,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                           selected == FormData.ConfirmPassword
                                               ? enabledtxt
                                               : deaible,
-                                      fontSize: 12)),
+                                      fontSize: 15)),
                               obscureText: ispasswordev,
                               textAlignVertical: TextAlignVertical.center,
                               style: TextStyle(
@@ -378,7 +379,7 @@ class SignUpScreen extends GetView<SignUpController> {
                                       ? enabledtxt
                                       : deaible,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12),
+                                  fontSize: 15),
                             ),
                           ),
                         ),
@@ -399,8 +400,8 @@ class SignUpScreen extends GetView<SignUpController> {
                                 "Đăng ký",
                                 style: TextStyle(
                                   color: Colors.white,
-                                  letterSpacing: 0.5,
-                                  fontSize: 16.0,
+                                  // letterSpacing: 0.5,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -412,6 +413,40 @@ class SignUpScreen extends GetView<SignUpController> {
                                       borderRadius:
                                           BorderRadius.circular(12.0)))),
                         ),
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        FadeAnimation(
+                          delay: 1,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Text("Nếu bạn đã có tài khoản? ",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                    letterSpacing: 0.5,
+                                  )),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (context) {
+                                    return LoginScreen();
+                                  }));
+                                },
+                                child: Text("Đăng nhập tại đây",
+                                    style: TextStyle(
+                                        color:
+                                            Colors.blueAccent.withOpacity(0.9),
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 0.5,
+                                        fontSize: 15)),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -419,39 +454,6 @@ class SignUpScreen extends GetView<SignUpController> {
 
                 //End of Center Card
                 //Start of outer card
-                const SizedBox(
-                  height: 20,
-                ),
-
-                FadeAnimation(
-                  delay: 1,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text("Nếu bạn đã có tài khoản? ",
-                          style: TextStyle(
-                            color: Colors.black,
-                            letterSpacing: 0.5,
-                          )),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (context) {
-                            return LoginScreen();
-                          }));
-                        },
-                        child: Text("Đăng nhập tại đây",
-                            style: TextStyle(
-                                color: Colors.blueAccent.withOpacity(0.9),
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 0.5,
-                                fontSize: 14)),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),

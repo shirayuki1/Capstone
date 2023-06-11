@@ -18,7 +18,8 @@ class AccountScreen extends GetView<AccountController> {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.back(closeOverlays: true);
+            // Get.back(closeOverlays: true);
+            Get.toNamed(Routes.setting);
           },
         ),
         elevation: 1,

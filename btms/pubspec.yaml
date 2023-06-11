@@ -61,10 +61,23 @@ dependencies:
   #timeline_result
   timeline_tile: ^2.0.0
   im_stepper: ^1.0.1+1
+  # Date formatter
+  intl: ^0.17.0
+
+  # Login with google
+  google_sign_in: ^5.0.7
+  firebase_auth: ^3.0.1
+  firebase_core: ^1.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # The following provides annotations help convert json to object
+  json_serializable: ^6.7.0
+  # The following helps generate .part code
+  build_runner: ^2.4.5
+  #Signin button
+  flutter_signin_button: ^2.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

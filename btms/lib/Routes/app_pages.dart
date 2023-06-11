@@ -18,6 +18,8 @@ import 'package:btms/Pages/History/binding/history_binding.dart';
 import 'package:btms/Pages/History/view/historyScreen.dart';
 import 'package:btms/Pages/ResultBird/binding/result_bird_binding.dart';
 import 'package:btms/Pages/ResultBird/view/result_bird_screen.dart';
+import 'package:btms/Pages/ResultInfo/binding/result_info_binding.dart';
+import 'package:btms/Pages/ResultInfo/view/result_info_screen.dart';
 import 'package:btms/Pages/Setting/binding/setting_binding.dart';
 import 'package:btms/Pages/Setting/view/setting_screen.dart';
 import 'package:btms/Pages/TournamentDetailComingSoon/binding/coming_tournament_detail_binding.dart';
@@ -125,6 +127,11 @@ class AppPages {
       name: Routes.resultBird,
       page: () => ResultBirdScreen(),
       binding: ResultBirdBinding(),
+    ),
+    GetPage(
+      name: Routes.resultInfoBird,
+      page: () => ResultInfoScreen(),
+      binding: ResultInfoBinding(),
     ),
     GetPage(
       name: Routes.checkinList,

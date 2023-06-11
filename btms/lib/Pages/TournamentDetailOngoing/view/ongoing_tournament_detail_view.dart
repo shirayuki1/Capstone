@@ -25,7 +25,8 @@ class OngoingTournamentDetailScreen
             color: Colors.black,
           ),
           onPressed: () {
-            Get.back(closeOverlays: true);
+            // Get.back(closeOverlays: true);
+            Get.toNamed(Routes.homeScreen);
           },
         ),
         elevation: 1,
@@ -53,7 +54,7 @@ class OngoingTournamentDetailScreen
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 320),
+                margin: EdgeInsets.only(top: 320, left: 10, right: 10),
                 child: Column(
                   children: [
                     Text(
@@ -68,8 +69,14 @@ class OngoingTournamentDetailScreen
                       height: 10,
                     ),
                     Expanded(
-                        child: Text(
-                            "NHẰM THỨC ĐẨY PHONG TRÀO CHIM CẢNH CHO ACE NGHỆ NHÂN CẢNH CHO ACE NGHỆ NHÂN Trường Chim TUẤN CÓNG")),
+                        child: Column(
+                      children: [
+                        Text(
+                            "NHẰM THỨC ĐẨY PHONG TRÀO CHIM CẢNH CHO ACE NGHỆ NHÂN CẢNH CHO ACE NGHỆ NHÂN Trường Chim TUẤN CÓNG"),
+                        Text(
+                            "NHẰM THỨC ĐẨY PHONG TRÀO CHIM CẢNH CHO ACE NGHỆ NHÂN CẢNH CHO ACE NGHỆ NHÂN Trường Chim TUẤN CÓNG"),
+                      ],
+                    )),
                   ],
                 ),
               ),

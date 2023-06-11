@@ -1,4 +1,5 @@
 import 'package:btms/Pages/EditProfile/controller/edit_profile_controller.dart';
+import 'package:btms/Routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -119,27 +120,32 @@ class EditProfileScreen extends GetView<EditProfileController> {
               SizedBox(
                 height: 35,
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.9,
-                height: 50,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 63,
-                    vertical: 13,
-                  ),
-                  child: SizedBox(
-                    width: 167,
-                    height: 19,
-                    child: Text(
-                      "Lưu thông tin",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+              GestureDetector(
+                onTap: () {
+                  Get.toNamed(Routes.account);
+                },
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  height: 50,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 63,
+                      vertical: 13,
+                    ),
+                    child: SizedBox(
+                      width: 167,
+                      height: 19,
+                      child: Text(
+                        "Lưu thông tin",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
                     ),
                   ),
+                  decoration: BoxDecoration(
+                      color: Color(0xff2AD4D3),
+                      borderRadius: BorderRadius.circular(4)),
                 ),
-                decoration: BoxDecoration(
-                    color: Color(0xff2AD4D3),
-                    borderRadius: BorderRadius.circular(4)),
               ),
             ],
           ),

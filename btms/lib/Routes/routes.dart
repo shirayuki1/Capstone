@@ -18,6 +18,7 @@ class Routes {
 
   static const String chooseBird = "/chooseScreen";
   static const String resultBird = "/resultBirdScreen";
+  static const String resultInfoBird = "/resultInfoBirdScreen";
 
   static const String birdInfo = "/birdInfoScreen";
   static const String editProfile = "/editProfileScreen";
